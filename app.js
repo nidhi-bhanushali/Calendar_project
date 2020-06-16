@@ -114,9 +114,8 @@ const blankDates = (count)=>{
     
     for(let x=0 , y = (daysInPrevMonth -count) + 1 ; x < count ; x++ , y++){
         let cell = document.createElement("li");
-        let cellSpan = document.createElement('span');
 		let cellText = document.createTextNode(y);
-        cellSpan.appendChild(cellText);
+        cell.appendChild(cellText);
         cell.classList.add('extra-date');
 		calendarBody.appendChild(cell);
     }
@@ -151,13 +150,13 @@ const prev = () => {
 
 showCalendar(month, year);
 
-let dates = document.querySelectorAll('.dateEl');
+let dates = document.querySelectorAll('.date');
 console.log(dates);
 
 
 function getLink(e) {
     // console.log(1223);
-    console.log(e)
+    console.log(e.target);
 } 
 
 
@@ -165,7 +164,7 @@ function getLink(e) {
 // Event listeners
 // calendarBody.addEventListener('click',getLink);
 dates.forEach(date => {
-    date.addEventListener('click' , getLink.bind(this))
+    date.addEventListener('click' , getLink)
 }); 
 nextBtn.addEventListener('click' , next);
 prevBtn.addEventListener('click' , prev)
