@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts:Raleway-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--fontawesome-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div>
+        <nav class="blue_backgroung">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo "><img src="Images/Group%2024.png" alt="K.J.S.I.E.I.T logo"></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="create.html">CREATE</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="#">CREATE</a></li>
+            <li><a href="#"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </div>
+
+    <!--   BEGIN:CREATE FORM-->
+    <div class="row">
+        <div id="my_container">
+            <form class="col s12 p-0">
+                <div class="row m-0">
+                    <div class="department">
+                        <div class="input-field col s12">
+                            <input id="department" type="text" class="validate">
+                            <label for="department">Enter Department</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="title">
+                        <div class="input-field col s12">
+                            <input id="title" type="text" class="validate">
+                            <label for="title">Enter Event Title</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="description">
+                        <div class="input-field col s12">
+                            <textarea id="description" class="materialize-textarea"></textarea>
+                            <label for="description">Enter Event Description</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-15">
+                    <div class="message_info">
+                        <label>
+                                <p>If you arrange event for multiple days at same time just add start date and end date.</p>
+                                <p>If you arrange event for multiple days at multiple time click the add button to add multiple time slots. </p>
+                        </label>
+                    </div>
+                </div>
+                <div class="add_button">
+                     <a class="btn-floating btn-large waves-effect waves-light darkpurple_bg"><i class="material-icons">add</i></a>
+                </div>
+                <div class="date_time">
+                <div class="row m-0">
+                        <div class="input-field col s2">
+                            <input id="start_date" type="text" class="datepicker">
+                            <label for="start_date">Start Date</label>
+                        </div>
+                        <div class="col s1 center-align mt-20">
+                            <span class="">to</span>
+                        </div>
+                        <div class="input-field col s2">
+                            <input id="end_date" type="text" class="datepicker">
+                            <label for="end_date">End Date</label>
+                        </div>
+                        <div class="col s2"></div>
+                        <div class="input-field col s2">
+                            <input id="start_time" type="text" class="timepicker">
+                            <label for="start_time">Start Time</label>
+                        </div>
+                        <div class="col s1 center-align mt-20">
+                            <span class="">to</span>
+                        </div>
+                        <div class="input-field col s2">
+                            <input id="end_time" type="text" class="timepicker">
+                            <label for="end_time">End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="extra-info">
+                        <div class="input-field col s2 p-0 width">
+                            <input id="venue" type="text" class="validate">
+                            <label for="venue">Venue</label>
+                        </div>
+                        <div class="col s1 m-13"></div>
+                        <div class="input-field col s2 p-0 width">
+                            <input id="stakeholders" type="text" class="validate">
+                            <label for="stakeholders">Target</label>
+                        </div>
+                        <div class="col s2"></div>
+                        <div class="input-field col s2 p-0 width ml-28">
+                            <input id="Speaker" type="text" class="validate">
+                            <label for="Speaker" class="speaker">Speaker</label>
+                        </div>
+                        <div class="col s1 m-13"></div>
+                        <div class="input-field col s2 p-0 width">
+                            <input id="Certificate" type="text" class="validate">
+                            <label for="Certificate" class="p-0 certificate">Certificate</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row center-align m-0">
+                    <div class="submit_form">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">SUBMIT</button>
+                        <button class="btn waves-effect waves-light">BACK</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--   END:CREATE FORM-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+    <script src="form.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const Calendar = document.querySelectorAll('.datepicker');
+            M.Datepicker.init(Calendar, {
+                format: 'dd-mmmm-yyyy'
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.timepicker');
+            M.Timepicker.init(elems, {});
+        });
+
+    </script>
+</body>
+
+</html>
