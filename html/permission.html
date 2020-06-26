@@ -7,7 +7,7 @@
     <title>Document</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Google Fonts:Raleway-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--fontawesome-->
@@ -21,7 +21,7 @@
         <nav class="blue_backgroung">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo "><img src="Images/Group%2024.png" alt="K.J.S.I.E.I.T logo"></a>
+                    <a href="#" class="brand-logo "><img src="../Images/Group%2024.png" alt="K.J.S.I.E.I.T logo"></a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="index.html">HOME</a></li>
@@ -70,7 +70,7 @@
                         <div class="card-panel black-text event m-0">
                            <div class="valign-wrapper">
                             <div class="row m-0">
-                                <div class="col m2 s6 p-0 card-date" style="transform: translateY(62%);">
+                                <div class="col m2 s12 p-0 card-date" style="transform: translateY(62%);">
                                     <h6 class="bold">Saturday</h6>
                                     <h6 class="bold">September 04</h6>
                                 </div>
@@ -95,10 +95,12 @@
                                             <span class="bold-sm">Stakeholder :</span> Teachers
                                         </div>
                                         <div class="submit_form row m-0">
+                                            <button id="myBtn" class="hide-on-med-and-up col s6 offset-s3">Read more</button>
+                                            <div id="more">
                                             <button class="btn waves-effect waves-light col m2 s6 offset-s3 mar-15">Approve</button>
-                                            <button class="btn waves-effect waves-light col m2 s6 offset-s3 grey black-text mar-0">Modify</button>
+                                            <button class="btn waves-effect waves-light col m2 s6 offset-s3 grey mar-0"><a href ="comments.html" class="black-text">Modify</a></button>
                                             <button class="btn waves-effect waves-light col m2 s6 offset-s3 mar-0">Reject</button>
-                                          </div>
+                                            </div></div>
                                     </div>
                                     </div>
                                     
@@ -139,10 +141,12 @@
                                                 <span class="bold-sm">Stakeholder :</span> Teachers
                                             </div>
                                             <div class="submit_form row m-0">
+                                                <button id="myBtn" class="hide-on-med-and-up col s6 offset-s3">Read more</button>
+                                                <div id="more">
                                                 <button class="btn waves-effect waves-light col m2 s6 offset-s3 mar-15">Approve</button>
                                                 <button class="btn waves-effect waves-light col m2 s6 offset-s3 grey black-text mar-0">Modify</button>
                                                 <button class="btn waves-effect waves-light col m2 s6 offset-s3 mar-0">Reject</button>
-                                              </div>
+                                                </div></div>
                                         </div>
                                         </div>
                                         
@@ -183,10 +187,12 @@
                                                 <span class="bold-sm">Stakeholder :</span> Teachers
                                             </div>
                                             <div class="submit_form row m-0">
+                                                <button id="myBtn" class="hide-on-med-and-up col s6 offset-s3">Read more</button>
+                                                <div id="more">
                                                 <button class="btn waves-effect waves-light col m2 s6 offset-s3 mar-15">Approve</button>
                                                 <button class="btn waves-effect waves-light col m2 s6 offset-s3 grey black-text mar-0">Modify</button>
                                                 <button class="btn waves-effect waves-light col m2 s6 offset-s3 mar-0">Reject</button>
-                                              </div>
+                                                </div></div>
                                         </div>
                                         </div>
                                         
@@ -210,7 +216,7 @@
     <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="event.js"></script>
+    <script src="../js/event.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.sidenav');
@@ -218,6 +224,7 @@
                 draggable: true,
             });
         });
+
 
     </script>
 </body>

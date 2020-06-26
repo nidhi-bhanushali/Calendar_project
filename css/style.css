@@ -72,6 +72,10 @@ x*{
     margin-top: 0!important;
 }
 
+.mt-50{
+    margin-top: 50px!important;
+}
+
 .ml-28{
   margin-left: 28px!important; 
 }
@@ -87,6 +91,11 @@ x*{
     font-size: 1.1rem!important;
     font-weight: 600;
     color: var(--darkpurple-color);
+}
+
+.mycol{
+    width: 7.5283rem;
+
 }
 /***************** Navbar ***************/
 /*nav .brand-logo{
@@ -370,6 +379,8 @@ textarea.materialize-textarea{
 .darkpurple_bg{
     background-color: var(--darkpurple-color);
 }
+
+/*** floating add Button**/
 .btn-floating.btn-large i {
      line-height: 40px; 
 }
@@ -379,18 +390,12 @@ textarea.materialize-textarea{
     position: absolute;
     right: 250px;
     top: 443px;
+    display: none;
 }
 .btn-floating:hover {
     background-color: var(--darkblue-color);
 }
-.message_info label p{
-    background-color: rgba(201, 67, 102, 0.2);
-    font-size: 1rem;
-/*    color: #fff;*/
-    color: #000;
-    padding: 0 .6rem;
-    border-left: solid 2px var(--darkpurple-color);
-}
+
 .selects-container .select-wrapper input.select-dropdown{
     border: none;
     border-radius: none;
@@ -402,20 +407,6 @@ textarea.materialize-textarea{
 .datepicker,.timepicker{
     text-align: center!important;
     padding: 0px!important;
-}
-#extra-info input[type=text]{
-    width: 90%;
-}
-#extra-info #Certificate{
-    width: 85%;
-}
-
-#extra-info input[type=text]:not(.browser-default).validate+label{
-    width: 56%;
-}
-#extra-info .speaker,
-#extra-info .certificate{
-    width: 66%!important;
 }
 .submit_form button{
     margin: 20px;
@@ -435,6 +426,140 @@ textarea.materialize-textarea{
     border: solid 2px var(--darkpurple-color);
 }
 
+/* dropdown*/
+.dropdown .select-wrapper+label{
+    font-size: 1rem;
+    background: #fff;
+    z-index: 1;
+}
+.dropdown .select-wrapper .caret{
+    fill:var(--mediumpurple-color);
+    right: 12px;
+}
+.dropdown .dropdown-content li>span{
+    font-size: 1rem;
+    line-height: 1rem;
+    color: var(--lightpurple-color);
+}
+.dropdown .select-dropdown li.disabled>span{
+    color: rgba(0,0,0,.3);
+}
+.dropdown .select-wrapper input.select-dropdown:focus {
+    border: solid 2px var(--darkblue-color);
+}
+.dropdown .input-field input[type=text]{
+    width: 85%;
+}
+/* stakeholders*/
+.stakeholders .select-wrapper+label,
+.venue .select-wrapper+label,
+.certificate .select-wrapper+label{
+    font-size: 1rem;
+    background: #fff;
+    z-index: 1;
+}
+.stakeholders .select-wrapper .caret,
+.venue .select-wrapper .caret,
+.certificate .select-wrapper .caret{
+    fill:var(--mediumpurple-color);
+    right: 12px;
+}
+.stakeholders .dropdown-content li>span,
+.venue .dropdown-content li>span,
+.certificate .dropdown-content li>span{
+    font-size: 1rem;
+    line-height: 1rem;
+    color: var(--lightpurple-color);
+}
+.stakeholders .select-dropdown li.disabled>span,
+.venue .select-dropdown li.disabled>span,
+.certificate .select-dropdown li.disabled>span{
+    color: rgba(0,0,0,.3);
+}
+.stakeholders .select-wrapper input.select-dropdown:focus,
+.venue .select-wrapper input.select-dropdown:focus,
+.certificate .select-wrapper input.select-dropdown:focus{
+    border: solid 2px var(--darkblue-color);
+}
+.stakeholders .input-field input[type=text],
+.venue .input-field input[type=text],
+.certificate .input-field input[type=text]{
+    width: 85%;
+}
+
+/** venue**/
+[type="checkbox"]:checked+span:not(.lever):before{
+    border-right: solid 2px var(--darkpurple-color);
+    border-bottom: solid 2px var(--darkpurple-color);
+}
+/**Fees**/
+.fees .input-field label{
+    width: 46%!important;
+}
+.fees .input-field input[type=text],
+.stakeholders .input-field input[type=text],
+.venue .input-field input[type=text],
+.speaker .input-field input[type=text],
+.certificate .input-field input[type=text]{
+    width: 85%;
+}
+
+/**** speaker***/
+.speaker .input-field label{
+    width: 38%!important;
+}
+
+/*** label***/
+.event_days label p,
+.multipe_time label p{
+    background-color: rgba(201, 67, 102, 0.2);
+    font-size: 1rem;
+    color: #000;
+    padding: 0 .6rem;
+    border-left: solid 2px var(--darkpurple-color);
+    line-height: 49px;
+/*    display: inline-block;*/
+}
+
+/** days spinner**/
+input[type=number]:not(.browser-default){
+    border: solid 2px var(--darkblue-color);
+    border-radius: 17px 0 17px 0;
+    padding: 0 15px 0 30px;
+    width: 96.2%;
+}
+input[type=number]:not(.browser-default):focus:not([readonly]){
+    border: solid 2px var(--darkblue-color);
+    box-shadow: none;
+}
+.event_days .input-field input{
+    width: 79%;
+}
+/*** multiple days**/
+.multipe_time label p{
+    display: inline-block;
+}
+div.yes,
+div.no{
+    display: inline-block;
+    margin: 1.7rem 0;
+}
+div.yes{
+    margin: 0 4rem 0 1.4rem;
+}
+[type="radio"]:checked+span:after{
+    background-color: var(--darkpurple-color);
+    border: solid 2px var(--darkpurple-color);
+}
+/** warning message **/
+.warning_message{
+     background-color: var(--mediumpurple-color);
+    font-size: 1rem;
+    color: #fff;
+    padding: 0 .6rem;
+    border-left: solid 2px var(--darkpurple-color);
+    margin: 0 0 15px 0;
+}
 
 
 
@@ -444,6 +569,7 @@ textarea.materialize-textarea{
     justify-content: space-evenly;
     align-items: center;
 }
+
 
 /* Media Queries */
 /* Media queries */
@@ -497,6 +623,26 @@ textarea.materialize-textarea{
         position: relative;
         top: 10px;
         margin-left: 30px;
+    }
+
+    .h-100{
+        height: 100vh!important;
+    }
+
+    /* .input-field{
+        width: 300px!important;
+    } */
+
+    #more{
+        display: none;
+    }
+
+    .top-0{
+        margin-top: 0px!important;
+    }
+
+    .comments{
+        width: 66%!important;
     }
     /* .month-list{
            padding: 5px 50px;

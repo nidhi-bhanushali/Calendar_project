@@ -44,10 +44,30 @@ const monthName = (month , year) => {
 monthName(month , year);
 
 
+// For permission page
+
+const moreText = document.getElementById("more");
+const btnText = document.getElementById("myBtn");
+
+function myFunction() {
+            // var dots = document.getElementById("dots");
+    
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                btnText.innerHTML = "Read Less";
+                // btnText.style.display = "none" ;
+            } else {
+                moreText.style.display = "none";
+                btnText.innerHTML = "Read more"; 
+            }
+    }
+
+
 // Event listeners
 prevBtn.addEventListener('click', prev);
 
 nextBtn.addEventListener('click' , next);
 
+btnText.addEventListener('click', myFunction);
 
 
