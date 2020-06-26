@@ -570,6 +570,21 @@ div.yes{
     align-items: center;
 }
 
+/* Comments Page */
+.btn-modify{
+    margin: 20px;
+    border-radius: 17px 0 17px 0;
+    padding: 0 40px;
+    height: 44px!important;
+    line-height: 40px!important;
+    background-color: var(--darkpurple-color);
+    color: white;
+    border: solid 2px var(--darkpurple-color);
+}
+
+.btn-modify:hover{
+    background-color: var(--mediumpurple-color)!important ;
+}
 
 /* Media Queries */
 /* Media queries */
@@ -625,8 +640,8 @@ div.yes{
         margin-left: 30px;
     }
 
-    .h-100{
-        height: 100vh!important;
+    .height{
+        height: 100%!important;
     }
 
     /* .input-field{
@@ -655,6 +670,10 @@ div.yes{
         grid-auto-rows: 78px;
         overflow: hidden;
     }
+
+    /* .height{
+        height: 100%!important;
+    } */
 }
 
 @media (min-height:701px) and (max-height:760px){
