@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <!-- Google Fonts:Raleway-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--fontawesome-->
@@ -25,7 +27,7 @@
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="events.html">EVENTS</a></li>
                         <li><a href="create.html">CREATE</a></li>
-                        <li><a href="#"><i class="fas fa-user"></i></a></li>
+                        <li><a href="#" data-target="slide-out" class="sidenav-trigger user"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -35,15 +37,32 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
-            <li><a href="#">CREATE</a></li>
-            <li><a href="#"><i class="fas fa-user"></i></a></li>
+            <li><a href="create.html">CREATE</a></li>
+            <li><a href="#">MY EVENTS</a></li>
+            <li><a href="#">PROFILE</a></li>
+            <li><a href="#">LOGOUT</a></li>
         </ul>
+        <div id="slide-out" class="sidenav">
+            <ul>
+                <li>
+                    <div class="user-view">
+                        <a href="#name"><span class="white-text name">John Doe</span></a>
+                        <a href="#designation"><span class="white-text designation"><i class="fas fa-map-marker-alt"></i>Designation</span></a>
+                    </div>
+                </li>
+                <li><a href="#">MY EVENTS</a></li>
+                <li><a href="#">PROFILE</a></li>
+            </ul>
+            <button class="btn waves-effect waves-light" type="submit" name="action">LOGOUT</button>
+        </div>
     </div>
+
+
 
     <!--   BEGIN:CREATE FORM-->
     <div class="row">
         <div id="my_container">
-            <form class="event-details col s12 p-0">
+            <form class="event-details col s12 m12 l12 p-0">
                 <div class="row m-0">
                     <div class="department">
                         <div class="input-field col s12">
@@ -70,9 +89,9 @@
                 </div>
                 <div class="row m-0">
                     <div class="dropdown">
-                        <div class="input-field col s3 p-0">
+                        <div class="input-field col s12 m6 l3 p-0">
                             <select>
-                                <option value="" disabled selected>Choose your option</option>
+                                <option value="" disabled selected>Select</option>
                                 <option value="1">Option 1</option>
                                 <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>
@@ -82,9 +101,9 @@
                     </div>
                     <div class="col mycol"></div>
                     <div class="stakeholders">
-                        <div class="input-field col s3 p-0">
+                        <div class="input-field col s12 m6 l3 p-0">
                             <select>
-                                <option value="" disabled selected>Choose your option</option>
+                                <option value="" disabled selected>Select</option>
                                 <option value="1">Option 1</option>
                                 <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>
@@ -94,29 +113,24 @@
                     </div>
                     <div class="col mycol"></div>
                     <div class="fees">
-                        <div class="input-field col s3">
+                        <div class="input-field col s12 m6 l3">
                             <input id="fees" type="text" class="validate">
                             <label for="fees">Enter Fees</label>
                         </div>
                     </div>
                 </div>
                 <div class="row m-0">
-                    <div class="venue">
-                        <div class="input-field col s3">
-                            <select multiple>
-                                <option value="" disabled>Choose your option</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <label>Venue</label>
+                    <div class="company_name">
+                       <div class="input-field col s12 m6 l3">
+                            <input id="company_name" type="text" class="validate">
+                            <label for="company_name">Company Name</label>
                         </div>
                     </div>
                     <div class="col mycol"></div>
                     <div class="certificate">
-                        <div class="input-field col s3">
+                        <div class="input-field col s12 m6 l3">
                             <select>
-                                <option value="" disabled selected>Choose your option</option>
+                                <option value="" disabled selected>Select</option>
                                 <option value="1">Yes</option>
                                 <option value="2">No</option>
                             </select>
@@ -125,40 +139,65 @@
                     </div>
                     <div class="col mycol"></div>
                     <div class="speaker">
-                        <div class="input-field col s3">
+                        <div class="input-field col s12 m6 l3">
                             <input id="Speaker" type="text" class="validate">
                             <label for="Speaker" class="speaker">Speaker</label>
                         </div>
                     </div>
                 </div>
                 <div class="row m-0">
-                    <div class="col s2"></div>
-                    <div class="event_days">
-                        <label class="col s4 p-0">
-                            <p>Enter the number of days for the event.</p>
+                    <div class="col mycol2"></div>
+                    <div class="multipe_venue">
+                        <label class="col s7 m7 l5 p-0">
+                            <p>Does this event require multiple venue?</p>
                         </label>
-                        <div class="col s1"></div>
-                        <div class="input-field col s3">
-                            <input id="no_of_days" type="number" min="1">
-                        </div>
-                    </div>
-                </div>
-                <div class="row m-0">
-                    <div class="col s2"></div>
-                    <div class="multipe_time">
-                        <label class="col s5 p-0">
-                            <p>Does this event require multiple time slots?</p>
-                        </label>
-                        <div class="col s3 p-0">
+                        <div class="col s4 m4 l3 p-0">
                             <div class="yes">
                                 <label>
-                                    <input id="yes" name="group1" type="radio" />
+                                    <input id="yes_venue" name="group1" type="radio" />
                                     <span>YES</span>
                                 </label>
                             </div>
                             <div class="no">
                                 <label>
-                                    <input id="no" name="group1" type="radio" />
+                                    <input id="no_venue" name="group1" type="radio" />
+                                    <span>NO</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="single_venue"></div>
+                </div>
+                <div class="row m-0">
+                    <div class="col mycol2"></div>
+                    <div class="event_days">
+                        <label class="col s7 m7 l4 p-0">
+                            <p>Enter the number of days for the event.</p>
+                        </label>
+                        <div class="col s1"></div>
+                        <div class="input-field col s4 m4 l3">
+                            <input id="no_of_days" type="number" min="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="col mycol2"></div>
+                    <div class="multipe_time">
+                        <label class="col s7 m7 l5 p-0">
+                            <p>Does this event require multiple time slots?</p>
+                        </label>
+                        <div class="col s4 m4 l3 p-0">
+                            <div class="yes">
+                                <label>
+                                    <input id="yes_time" name="group2" type="radio" />
+                                    <span>YES</span>
+                                </label>
+                            </div>
+                            <div class="no">
+                                <label>
+                                    <input id="no_time" name="group2" type="radio" />
                                     <span>NO</span>
                                 </label>
                             </div>
@@ -166,16 +205,27 @@
                     </div>
                 </div>
 
-                <div class="add_button">
+                <div class="add_button" id="">
                     <a class="btn-floating btn-large waves-effect waves-light darkpurple_bg"><i class="material-icons">add</i></a>
                 </div>
-                
-
+<!--
+                 <div class="venue">
+                        <div class="input-field col s12 m6 l3">
+                            <select multiple>
+                                <option value="" disabled>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Venue</label>
+                        </div>
+                    </div>
+-->
             </form>
             <form class="buttons">
                 <div class="row center-align m-0">
                     <div class="submit_form">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">SUBMIT</button>
+                        <button class="btn waves-effect waves-light submit" type="submit" name="action">SUBMIT</button>
                         <button class="btn waves-effect waves-light">BACK</button>
                     </div>
                 </div>

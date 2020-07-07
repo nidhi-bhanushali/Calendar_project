@@ -8,6 +8,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <!-- Google Fonts:Raleway-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--fontawesome-->
@@ -27,20 +28,36 @@
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="events.html">EVENTS</a></li>
                         <li><a href="create.html">CREATE</a></li>
-                        <li><a href="#"><i class="fas fa-user"></i></a></li>
+                        <li><a href="#" data-target="slide-out" class="sidenav-trigger user"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-
+    
+    
         <ul class="sidenav" id="mobile-demo">
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
             <li><a href="create.html">CREATE</a></li>
-            <li><a href="#"><i class="fas fa-user"></i></a></li>
+            <li><a href="#">MY EVENTS</a></li>
+            <li><a href="#">PROFILE</a></li>
+            <li><a href="#">LOGOUT</a></li>
         </ul>
+        <div id="slide-out" class="sidenav">
+            <ul>
+                <li>
+                    <div class="user-view">
+                        <a href="#name"><span class="white-text name">John Doe</span></a>
+                        <a href="#designation"><span class="white-text designation"><i class="fas fa-map-marker-alt"></i>Designation</span></a>
+                    </div>
+                </li>
+                <li><a href="#">MY EVENTS</a></li>
+                <li><a href="#">PROFILE</a></li>
+            </ul>
+            <button class="btn waves-effect waves-light" type="submit" name="action">LOGOUT</button>
+        </div>
     </div>
+
     <div id="events">
         <div class="container">
             <!-- Month -->

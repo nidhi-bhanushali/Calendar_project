@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 </head>
+
 <body>
     <div>
         <nav class="blue_backgroung">
@@ -56,48 +57,63 @@
         </div>
     </div>
 
-<div class="calendar">
-    <div class="calendar-container">
-			<div id="calendar-month">
-				<div class="list month-list">
-                    <i class="fas fa-chevron-left col s3" id="prev"></i>
-					<p id="month" class="col s6"></p>
-				    <i class="fas fa-chevron-right col s3" id="next"></i>
+
+
+    <!--   BEGIN:CREATE FORM-->
+    <div class="row">
+        <div id="my_container">
+            <form class="event-details col s12 m12 l12 p-0">
+                <div class="row m-0">
+                    <div class="name">
+                        <div class="input-field col s12">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Enter Name</label>
+                        </div>
+                    </div>
                 </div>
-			</div>
-        <div class="calendar-days"> 
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thur</div>
-            <div>Fri</div>
-            <div>Sat</div>
+                <div class="row m-0">
+                    <div class="email">
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Enter email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="designation">
+                        <div class="input-field col s12 p-0">
+                            <select>
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">Principal</option>
+                                <option value="2">Vice Principal</option>
+                                <option value="3">Dean of Academics</option>
+                                <option value="3">HOD</option>
+                            </select>
+                            <label>Designation</label>
+                        </div>
+                    </div>
+                    <div class="admin">
+                        <div class="input-field col s12 p-0">
+                            <select>
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                            <label>Admin</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-        
-        <ul id="calendar-date" class="date-list">
-           
-        </ul>
     </div>
-</div>
+    <!--   END:CREATE FORM-->
 
-<!-- <div class="event-container">
-    <div class="events visible">
-        <span class="no-events event-message">There are no events today</span>
-    </div>
-</div> -->
+    <!-- JQuery -->
+    <script src="../js/jquery.min.js"></script>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-    <script src="../js/app.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems,
-            { draggable: true,
-            });
-        });
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+
+    <script src="../js/form.js"></script>
 </body>
-</html>
 
+</html>
