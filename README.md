@@ -4,4 +4,5 @@ Frontend part of the activity scheduler which can be used to schedule various ev
 ## Tech Stack
 * HTML
 * CSS
+* Materialize CSS
 * JavaScript
